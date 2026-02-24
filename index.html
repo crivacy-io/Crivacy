@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crivacy — Privacy‑Native KYC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit secondary"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand-slot" href="#home" id="marketing-home-link">
+      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <span>Crivacy</span>
+    </a>
+    <nav class="nav">
+      <a href="#how-it-works">How it Works</a>
+      <a href="#why-crivacy">Why Crivacy</a>
+      <a href="#ecosystem">Partners</a>
+      <a href="#get-started">Get Started</a>
+    </nav>
+    <div class="top-actions"></div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <main>
+    <section id="home" class="hero reveal">
+      <div class="hero-left">
+        <div class="pill">Canton-Native · Privacy-by-Design</div>
+        <h1>Verify once. Access Canton.</h1>
+        <p>
+          A shared KYC credential layer for the Canton Network. One credential, every app. Your proof moves, your data doesn't.
+        </p>
+        <div class="hero-actions">
+          <a class="primary hero-waitlist" href="mailto:hello@crivacy.io">Request Early Access</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="glass-card">
+          <div class="card-top">
+            <span class="mono" style="color: var(--muted);">crivacy::1220feb9...</span>
+            <span class="chip active" style="margin-left:auto;">Verified</span>
+          </div>
+          <h3>Canton Credential</h3>
+          <p class="muted">Verify once. Your proof moves across Canton. Your data doesn't.</p>
+          <div class="credential-signal" aria-hidden="true">
+            <span class="signal-dot"></span>
+            <span class="mono">Verifying credential on Canton...</span>
+            <span class="signal-bars">
+              <i></i><i></i><i></i>
+            </span>
+          </div>
+          <div class="status-row">
+            <span>Verified</span>
+            <span class="mono" id="row-val-1">KYC Approved</span>
+            <div class="status-progress">
+              <div class="status-progress-bar"></div>
+            </div>
+          </div>
+          <div class="status-row">
+            <span>On-chain</span>
+            <span class="mono" id="row-val-2">Status only</span>
+            <div class="status-progress">
+              <div class="status-progress-bar"></div>
+            </div>
+          </div>
+          <div class="status-row">
+            <span>Access</span>
+            <span class="mono" id="row-val-3">Reusable + Revocable</span>
+            <div class="status-progress">
+              <div class="status-progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section reveal full-page-section">
+      <div class="section-head">
+        <h2>How it Works</h2>
+        <p>Crivacy turns one verification into reusable proof access across Canton applications.</p>
+      </div>
+      <div class="how-flow" aria-hidden="true">
+        <div class="how-node">
+          <span class="how-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.1 13.6-3-3 1.4-1.4 1.6 1.6 3.8-3.8 1.4 1.4-5.2 5.2z"/>
+            </svg>
+          </span>
+          <span>Verify</span>
+        </div>
+        <span class="how-link"></span>
+        <div class="how-node">
+          <span class="how-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2 3 6.5V12c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6.5L12 2zm0 4 5 2.5v3.3c0 3.5-2.3 6.6-5 7.2-2.7-.6-5-3.7-5-7.2V8.5L12 6zm-2 4h4v1.5h-4V10zm0 2.7h4v1.5h-4v-1.5z"/>
+            </svg>
+          </span>
+          <span>Proof</span>
+        </div>
+        <span class="how-link"></span>
+        <div class="how-node">
+          <span class="how-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 10V8a5 5 0 1 1 10 0v2h1.5A1.5 1.5 0 0 1 20 11.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5v-8A1.5 1.5 0 0 1 5.5 10H7zm2 0h6V8a3 3 0 1 0-6 0v2zm3 3a2 2 0 0 1 1 3.7V18h-2v-1.3A2 2 0 0 1 12 13z"/>
+            </svg>
+          </span>
+          <span>Access</span>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-label">Step 1</div>
+          <div class="how-content">
+            <h3>Verify</h3>
+            <p class="muted">Complete KYC once. Documents verified, then deleted.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Step 2</div>
+          <div class="how-content">
+            <h3>Proof</h3>
+            <p class="muted">A credential is written to Canton. No personal data on-ledger.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Step 3</div>
+          <div class="how-content">
+            <h3>Access</h3>
+            <p class="muted">Any Canton app reads your credential. No re-verification needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-crivacy" class="section reveal full-page-section">
+      <div class="section-head">
+        <h2>Why Crivacy</h2>
+        <p>Built for privacy-first identity flows that scale across financial applications.</p>
+      </div>
+      <div class="why-toggle">
+        <button class="why-toggle-btn active" data-persona="users">For Users</button>
+        <button class="why-toggle-btn" data-persona="builders">For Builders</button>
+      </div>
+      <div class="why-signal" aria-hidden="true">
+        <span class="why-node">Confidential Workflows</span>
+        <span class="why-node">Reusable Credentials</span>
+        <span class="why-node">Canton Contract Sync</span>
+      </div>
+      <div class="grid-3 why-grid">
+        <div class="card why-card">
+          <div class="why-pill mono">Privacy Layer</div>
+          <h3>Privacy-Native</h3>
+          <p class="muted why-text" data-users="Your documents are verified once, then deleted. Only your proof stays." data-builders="Proof-first architecture keeps sensitive details off-ledger. Compliance-ready by design."></p>
+        </div>
+        <div class="card why-card">
+          <div class="why-pill mono">Interoperability</div>
+          <h3>Reusable</h3>
+          <p class="muted why-text" data-users="Verify once, use everywhere. No re-uploading documents for every app." data-builders="One integration, reusable across every user journey. No repeated KYC costs."></p>
+        </div>
+        <div class="card why-card">
+          <div class="why-pill mono">Canton Ready</div>
+          <h3>Canton-Native</h3>
+          <p class="muted why-text" data-users="Your proof works across every Canton app automatically." data-builders="Built on Daml and Canton. Permissioned access, interoperable identity, out of the box."></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="section reveal full-page-section">
+      <div class="section-head ecosystem-head">
+        <h2>Partners</h2>
+        <p>Our ecosystem partnerships are expanding. New integrations will appear here.</p>
+      </div>
+      <div class="ecosystem-stack">
+        <div class="card ecosystem-item partner-card">
+          <div class="partner-logo-slot" aria-hidden="true"></div>
+          <p class="muted partner-copy">Coming Soon</p>
+        </div>
+        <div class="card ecosystem-item partner-card">
+          <div class="partner-logo-slot" aria-hidden="true"></div>
+          <p class="muted partner-copy">Coming Soon</p>
+        </div>
+        <div class="card ecosystem-item partner-card">
+          <div class="partner-logo-slot" aria-hidden="true"></div>
+          <p class="muted partner-copy">Coming Soon</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="section reveal full-page-section">
+      <div class="section-head">
+        <h2>Get Started</h2>
+        <p>Early access is open. Users and teams can apply to join the Crivacy network.</p>
+      </div>
+      <div class="grid-2 start-grid">
+        <div class="card start-card">
+          <h3>For Users</h3>
+          <p class="muted">Complete KYC once. Access every Canton app without reverifying.</p>
+          <a class="primary" id="users-join-waitlist">Coming Soon</a>
+        </div>
+        <div class="card start-card">
+          <h3>For Teams</h3>
+          <p class="muted">Add shared KYC to your Canton app. No infrastructure needed.</p>
+          <a class="primary" href="mailto:hello@crivacy.io">Request Access</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-title">Product</div>
+        <div class="footer-links">
+          <a href="#how-it-works">How it Works</a>
+          <a href="#why-crivacy">Why Crivacy</a>
+          <a href="#ecosystem">Partners</a>
+          <a href="#get-started">Get Started</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Resources</div>
+        <div class="footer-links">
+          <a href="#developers">Documentation</a>
+          <a href="https://www.canton.network" target="_blank">Canton Network</a>
+          <a href="https://docs.daml.com" target="_blank">Daml Docs</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Company</div>
+        <div class="footer-links">
+          <a href="#home">About</a>
+          <a href="mailto:hello@crivacy.io">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Legal</div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <div class="brand-slot">
+          <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+          <span>Crivacy</span>
+        </div>
+        <div class="socials">
+          <a class="social" href="https://github.com/crivacy-io" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.66.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.72-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.55 2.36 1.1 2.94.84.09-.67.35-1.1.64-1.35-2.22-.26-4.56-1.15-4.56-5.11 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.06A9.2 9.2 0 0 1 12 7.6c.85 0 1.71.12 2.51.34 1.9-1.34 2.74-1.06 2.74-1.06.55 1.4.2 2.44.1 2.7.64.73 1.03 1.66 1.03 2.79 0 3.97-2.35 4.85-4.58 5.1.36.32.68.95.68 1.92 0 1.38-.01 2.5-.01 2.84 0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+            </svg>
+          </a>
+          <a class="social" href="https://x.com/crivacyio" aria-label="X" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M17.4 3h3.1l-6.8 7.8 8 10.2h-6.2l-4.9-6.2-5.4 6.2H2.1l7.2-8.2L1.7 3H8l4.4 5.6L17.4 3zm-1.1 15.1h1.7L7.9 4.8H6.1l10.2 13.3z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>© 2026 Crivacy Protocol. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+  </footer>
+
+  <aside class="consent-sheet" id="consent-sheet" aria-hidden="true">
+    <div class="consent-card">
+      <div class="consent-head">
+        <strong>Consent Required</strong>
+        <button class="ghost" data-toggle="consent" aria-label="Close">×</button>
+      </div>
+      <p>
+        Biometric and PII data are processed off‑chain for verification only.
+        Raw data is never stored on‑ledger. Proofs are shared only with authorized parties.
+      </p>
+      <div class="consent-actions">
+        <button class="primary" id="consent-accept-btn">I Consent</button>
+        <button class="ghost" id="consent-decline-btn">Decline</button>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="section-indicator" aria-hidden="true">
+    <div class="indicator-dot" data-target="#how-it-works" title="How it Works"></div>
+    <div class="indicator-dot" data-target="#why-crivacy" title="Why Crivacy"></div>
+    <div class="indicator-dot" data-target="#ecosystem" title="Partners"></div>
+    <div class="indicator-dot" data-target="#get-started" title="Get Started"></div>
+  </aside>
+
+  <script src="marketing.js"></script>
+  <script>
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#@$%&*';
+
+    function decrypt(el, finalText, delay) {
+      if (!el) return;
+      const len = finalText.length;
+      let iterations = 0;
+      const total = len * 6;
+
+      setTimeout(() => {
+        const interval = setInterval(() => {
+          el.textContent = finalText
+            .split('')
+            .map((char, i) => {
+              if (char === ' ') return ' ';
+              if (i < Math.floor(iterations / 6)) return char;
+              return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+
+          if (iterations >= total) {
+            el.textContent = finalText;
+            clearInterval(interval);
+          }
+          iterations++;
+        }, 40);
+      }, delay);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      decrypt(document.getElementById('row-val-1'), 'KYC Approved', 800);
+      decrypt(document.getElementById('row-val-2'), 'Status only', 1400);
+      decrypt(document.getElementById('row-val-3'), 'Reusable + Revocable', 2000);
+    });
+  </script>
+</body>
+</html>

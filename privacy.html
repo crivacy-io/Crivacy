@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Crivacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 92px 24px 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .legal-doc {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 8px 0 0;
+    }
+    .legal-doc h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.1;
+    }
+    .legal-doc .legal-meta {
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+    }
+    .legal-doc .legal-intro {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 26px;
+      max-width: 78ch;
+    }
+    .legal-section {
+      margin: 0 0 28px;
+      padding: 0 0 4px;
+    }
+    .legal-section h2 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+    }
+    .legal-section p, .legal-section li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+    .legal-section ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+    .legal-section a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(159, 227, 201, 0.35);
+    }
+    .legal-links {
+      display: flex;
+      gap: 18px;
+      justify-content: flex-end;
+      color: var(--muted);
+    }
+    .legal-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .legal-links .active {
+      color: var(--text);
+    }
+    .footer {
+      padding: 10px 24px 18px;
+      background: rgba(12, 14, 17, 0.62);
+    }
+    .footer-bar {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 14px;
+      border-top: 0;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .legal-main { padding-top: 84px; padding-bottom: 34px; }
+      .legal-links { justify-content: flex-start; gap: 12px; }
+      .footer { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit secondary"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand-slot" href="index.html">
+      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <span>Crivacy</span>
+    </a>
+    <nav class="nav"></nav>
+    <div class="top-actions">
+      <a class="ghost" href="index.html">Back to Home</a>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <article class="legal-doc">
+      <h1>Privacy Policy</h1>
+      <p class="legal-meta">Last updated: February 2025</p>
+      <p class="legal-intro">
+        Crivacy operates a shared KYC credential layer for the Canton Network. Crivacy acts as a credential orchestration layer. Identity verification data is processed by the verification provider (Sumsub). Crivacy receives only verification outcomes necessary to issue and manage credentials. Crivacy is designed to separate identity verification from on-ledger credential usage, minimizing data exposure.
+      </p>
+
+      <section class="legal-section">
+        <h2>1. Data Collection (KYC)</h2>
+        <p>To complete KYC, identity verification data is collected through the verification flow. This may include identity document images, selfie or liveness checks, and basic profile information required by the KYC provider.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Processing via Sumsub</h2>
+        <p>Crivacy uses Sumsub to run identity verification. Sumsub processes KYC data and returns a verification outcome to Crivacy so a credential can be issued or updated.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Raw Data and Deletion</h2>
+        <p>Crivacy does not store raw KYC documents on Canton. Raw verification data is handled through the KYC provider flow and is not written to Canton.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. What Is Written to Canton</h2>
+        <p>Crivacy writes only credential proof status information to Canton. This may include verification status, timestamps, validity period, and a proof hash or reference identifier. Personal KYC documents and sensitive raw identity data are not stored on-ledger.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. User Rights (Revoke)</h2>
+        <ul>
+          <li>Users may request credential revocation where available. Changes to credential status are reflected to supporting integrated apps via Canton.</li>
+          <li>Users may request deletion of applicable off-ledger records, subject to legal and compliance obligations.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Contact</h2>
+        <p>For privacy questions or requests, contact <a href="mailto:hello@crivacy.io">hello@crivacy.io</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bar">
+      <span>© 2026 Crivacy Protocol. All rights reserved.</span>
+      <span class="legal-links">
+        <a class="active" href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

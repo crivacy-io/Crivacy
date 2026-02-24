@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Crivacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="dark">
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit secondary"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand-slot" href="index.html">
+      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <span>Crivacy</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#how-it-works">How it Works</a>
+      <a href="index.html#why-crivacy">Why Crivacy</a>
+      <a href="index.html#ecosystem">Partners</a>
+      <a href="index.html#get-started">Get Started</a>
+    </nav>
+    <div class="top-actions"></div>
+  </header>
+
+  <main>
+    <section class="hero reveal" style="grid-template-columns: 1fr; min-height: auto; gap: 18px;">
+      <div class="hero-left">
+        <div class="pill">About Crivacy</div>
+        <h1>Shared KYC credential infrastructure for the Canton Network.</h1>
+        <p>
+          Crivacy lets users complete KYC once and reuse a credential across Canton applications.
+          Sumsub performs verification off-ledger, while Crivacy writes only credential status and proof metadata to Canton.
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="glass-card">
+          <div class="card-top">
+            <span class="mono" style="color: var(--muted);">crivacy::1220feb9...</span>
+            <span class="chip active" style="margin-left:auto;">Verified</span>
+          </div>
+          <h3>What We Actually Store</h3>
+          <div class="status-row"><span>Verification</span><span class="mono">Off-ledger (Sumsub)</span></div>
+          <div class="status-row"><span>On Canton</span><span class="mono">Status + proof hash</span></div>
+          <div class="status-row"><span>Access</span><span class="mono">Reusable + Revocable</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" style="margin-top: 0;">
+      <div class="section-head">
+        <h2>How Crivacy Works</h2>
+        <p>Current implementation and product logic in plain language.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-label">Step 1</div>
+          <h3>Verify Once</h3>
+          <p class="muted">A user completes KYC through Sumsub. Documents are verified off-ledger and are not written to Canton.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Step 2</div>
+          <h3>Issue Credential</h3>
+          <p class="muted">Crivacy writes credential status and a proof hash to Canton via Daml. Raw personal data stays off-ledger.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Step 3</div>
+          <h3>Reuse Across Apps</h3>
+          <p class="muted">Any integrated Canton app can verify credential state and validity without requiring repeated KYC.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Why We Built It</h2>
+        <p>Onboarding fragmentation creates repeated KYC costs, poor user experience, and unnecessary exposure of sensitive data.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>For Users</h3>
+          <p class="muted">Complete identity verification once, then carry a reusable credential across participating Canton apps.</p>
+        </div>
+        <div class="card">
+          <h3>For Builders</h3>
+          <p class="muted">Add shared KYC to your app without building your own identity infrastructure or storing sensitive KYC data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Current Demo Scope</h2>
+        <p>What is already implemented in the working prototype.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Live Flow</h3>
+          <p class="muted">Consent -> KYC start -> Sumsub WebSDK -> Canton credential finalization -> reusable credential state.</p>
+        </div>
+        <div class="card">
+          <h3>Credential Lifecycle</h3>
+          <p class="muted">Pending, Active, Rejected, and Revoked states are supported with proof-hash generation and verification APIs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Questions, partnerships, or integration requests.</p>
+      </div>
+      <div class="card" style="max-width: 720px;">
+        <p class="muted" style="margin-bottom: 12px;">Reach the Crivacy team directly for early access, integrations, and collaboration.</p>
+        <a class="primary" href="mailto:hello@crivacy.io">hello@crivacy.io</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bar" style="border-top: 0;">
+      <span>© 2026 Crivacy Protocol. All rights reserved.</span>
+      <span><a href="index.html" style="color: inherit; text-decoration: none;">Back to Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>

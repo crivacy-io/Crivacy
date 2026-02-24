@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Crivacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 92px 24px 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .legal-doc {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 8px 0 0;
+    }
+    .legal-doc h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.1;
+    }
+    .legal-doc .legal-meta {
+      color: var(--muted);
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+    }
+    .legal-doc .legal-intro {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 26px;
+      max-width: 78ch;
+    }
+    .legal-section {
+      margin: 0 0 28px;
+      padding: 0 0 4px;
+    }
+    .legal-section h2 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+    }
+    .legal-section p, .legal-section li {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+    .legal-section ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+    .legal-section a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(159, 227, 201, 0.35);
+    }
+    .legal-links {
+      display: flex;
+      gap: 18px;
+      justify-content: flex-end;
+      color: var(--muted);
+    }
+    .legal-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .legal-links .active {
+      color: var(--text);
+    }
+    .footer {
+      padding: 10px 24px 18px;
+      background: rgba(12, 14, 17, 0.62);
+    }
+    .footer-bar {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 14px;
+      border-top: 0;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .legal-main { padding-top: 84px; padding-bottom: 34px; }
+      .legal-links { justify-content: flex-start; gap: 12px; }
+      .footer { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit secondary"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand-slot" href="index.html">
+      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <span>Crivacy</span>
+    </a>
+    <nav class="nav"></nav>
+    <div class="top-actions">
+      <a class="ghost" href="index.html">Back to Home</a>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <article class="legal-doc">
+      <h1>Terms of Service</h1>
+      <p class="legal-meta">Last updated: February 2025</p>
+      <p class="legal-intro">
+        Crivacy operates a shared KYC credential layer for Canton Network applications. These terms describe what the service does, what users are responsible for, and what to expect during early access.
+      </p>
+
+      <section class="legal-section">
+        <h2>1. What the Service Is</h2>
+        <p>Crivacy helps users complete KYC once and reuse a credential across integrated Canton apps. Sumsub performs verification, and Crivacy manages credential status and proof outcome handling for reuse across the network.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. User Responsibilities</h2>
+        <p>Users are responsible for providing accurate information during verification and using the service lawfully. If information is false or misleading, credential issuance or access may be rejected, revoked, or limited.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. What a Credential Means</h2>
+        <p>A Crivacy credential means a verification outcome exists and can be checked by integrated apps. Credential availability across different applications depends on partner integrations and may vary by app. It does not guarantee access to every app, and each app may apply its own eligibility, policy, or compliance rules.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Compliance</h2>
+        <p>Crivacy does not make compliance decisions on behalf of applications. Each integrated application independently determines its own eligibility and regulatory requirements.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Service Changes</h2>
+        <p>Crivacy may modify, suspend, or update features, flows, integrations, or requirements over time as the product and network evolve.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Early Access</h2>
+        <p>Crivacy is in an early access stage. Some features may be incomplete, change over time, or become temporarily unavailable while the service is being improved.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Contact</h2>
+        <p>For service questions or access requests, contact <a href="mailto:hello@crivacy.io">hello@crivacy.io</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bar">
+      <span>© 2026 Crivacy Protocol. All rights reserved.</span>
+      <span class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a class="active" href="terms.html">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
