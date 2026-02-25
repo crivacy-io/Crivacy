@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="dark">
+<body data-theme="light">
   <div class="bg-orbit"></div>
   <div class="bg-orbit secondary"></div>
   <div class="bg-grid"></div>
 
   <header class="topbar">
     <a class="brand-slot" href="#home" id="marketing-home-link">
-      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <img class="brand-logo" src="assets/crivacy-wordmark-light.png" data-logo-light="assets/crivacy-wordmark-light.png" data-logo-dark="assets/crivacy-wordmark.png" alt="Crivacy logo" />
       <span>Crivacy</span>
     </a>
     <nav class="nav">
@@ -25,7 +25,11 @@
       <a href="#ecosystem">Partners</a>
       <a href="#get-started">Get Started</a>
     </nav>
-    <div class="top-actions"></div>
+    <div class="top-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-dot"></span><span>Light</span>
+      </button>
+    </div>
   </header>
 
   <div class="scroll-progress" aria-hidden="true">
@@ -252,7 +256,7 @@
       </div>
       <div class="footer-brand">
         <div class="brand-slot">
-          <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+          <img class="brand-logo" src="assets/crivacy-wordmark-light.png" data-logo-light="assets/crivacy-wordmark-light.png" data-logo-dark="assets/crivacy-wordmark.png" alt="Crivacy logo" />
           <span>Crivacy</span>
         </div>
         <div class="socials">
@@ -299,6 +303,7 @@
     <div class="indicator-dot" data-target="#get-started" title="Get Started"></div>
   </aside>
 
+  <script src="theme-toggle.js"></script>
   <script src="marketing.js"></script>
   <script>
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#@$%&*';

@@ -91,18 +91,21 @@
     }
   </style>
 </head>
-<body data-theme="dark">
+<body data-theme="light">
   <div class="bg-orbit"></div>
   <div class="bg-orbit secondary"></div>
   <div class="bg-grid"></div>
 
   <header class="topbar">
     <a class="brand-slot" href="index.html">
-      <img class="brand-logo" src="assets/crivacy-logo.png" alt="Crivacy logo" />
+      <img class="brand-logo" src="assets/crivacy-wordmark-light.png" data-logo-light="assets/crivacy-wordmark-light.png" data-logo-dark="assets/crivacy-wordmark.png" alt="Crivacy logo" />
       <span>Crivacy</span>
     </a>
     <nav class="nav"></nav>
     <div class="top-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
+        <span class="theme-dot"></span><span>Light</span>
+      </button>
       <a class="ghost" href="index.html">Back to Home</a>
     </div>
   </header>
@@ -161,5 +164,6 @@
       </span>
     </div>
   </footer>
+  <script src="theme-toggle.js"></script>
 </body>
 </html>
