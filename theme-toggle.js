@@ -37,6 +37,12 @@ function applyTheme(theme) {
 window.addEventListener("DOMContentLoaded", () => {
   if (!document.body || document.body.classList.contains("app-page")) return;
 
+  const isMobile = window.matchMedia && window.matchMedia("(max-width: 900px)").matches;
+  if (isMobile) {
+    applyTheme("dark");
+    return;
+  }
+
   const initial = getStoredTheme() || document.body.getAttribute("data-theme") || "light";
   applyTheme(initial);
 

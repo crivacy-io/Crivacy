@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-theme="light">
+<body data-theme="light" class="marketing-page">
   <div class="bg-orbit"></div>
   <div class="bg-orbit secondary"></div>
   <div class="bg-grid"></div>
@@ -29,8 +29,26 @@
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
         <span class="theme-dot"></span><span>Light</span>
       </button>
+      <button class="menu-toggle" type="button" id="mobile-menu-toggle" aria-label="Open menu" aria-controls="mobile-menu-sheet" aria-expanded="false" onclick="window.__toggleMobileMenu && window.__toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <aside class="mobile-menu-sheet" id="mobile-menu-sheet" aria-hidden="true">
+    <div class="mobile-menu-card">
+      <div class="mobile-menu-head">
+        <strong>Menu</strong>
+        <button class="ghost" type="button" id="mobile-menu-close" aria-label="Close menu" onclick="window.__closeMobileMenu && window.__closeMobileMenu()">×</button>
+      </div>
+      <div class="mobile-menu-toplinks">
+        <a href="#how-it-works" class="mobile-menu-link">How it Works</a>
+        <a href="#why-crivacy" class="mobile-menu-link">Why Crivacy</a>
+        <a href="#ecosystem" class="mobile-menu-link">Partners</a>
+        <a href="#get-started" class="mobile-menu-link">Get Started</a>
+      </div>
+    </div>
+  </aside>
 
   <div class="scroll-progress" aria-hidden="true">
     <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
@@ -306,6 +324,33 @@
   <script src="theme-toggle.js"></script>
   <script src="marketing.js"></script>
   <script>
+    (function () {
+      function setMenu(open) {
+        const sheet = document.getElementById('mobile-menu-sheet');
+        const toggle = document.getElementById('mobile-menu-toggle');
+        if (!sheet) return;
+        sheet.classList.toggle('open', !!open);
+        sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('mobile-menu-open', !!open);
+      }
+
+      window.__toggleMobileMenu = function () {
+        const sheet = document.getElementById('mobile-menu-sheet');
+        const isOpen = !!(sheet && sheet.classList.contains('open'));
+        setMenu(!isOpen);
+      };
+
+      window.__closeMobileMenu = function () {
+        setMenu(false);
+      };
+
+      document.addEventListener('click', function (event) {
+        const link = event.target.closest('.mobile-menu-link');
+        if (link) setMenu(false);
+      });
+    })();
+
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#@$%&*';
 
     function decrypt(el, finalText, delay) {
