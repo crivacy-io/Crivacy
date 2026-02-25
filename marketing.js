@@ -92,10 +92,19 @@ if (mobileMenuToggle) {
     const isOpen = !!(mobileMenuSheet && mobileMenuSheet.classList.contains('open'));
     setMobileMenuOpen(!isOpen);
   });
+  mobileMenuToggle.addEventListener('pointerup', (event) => {
+    event.preventDefault();
+    const isOpen = !!(mobileMenuSheet && mobileMenuSheet.classList.contains('open'));
+    setMobileMenuOpen(!isOpen);
+  });
 }
 
 if (mobileMenuClose) {
   mobileMenuClose.addEventListener('click', () => setMobileMenuOpen(false));
+  mobileMenuClose.addEventListener('pointerup', (event) => {
+    event.preventDefault();
+    setMobileMenuOpen(false);
+  });
 }
 
 if (mobileMenuSheet) {
@@ -103,6 +112,16 @@ if (mobileMenuSheet) {
     if (event.target === mobileMenuSheet) setMobileMenuOpen(false);
   });
 }
+
+document.addEventListener('click', (event) => {
+  const toggleBtn = event.target.closest('#mobile-menu-toggle');
+  const closeBtn = event.target.closest('#mobile-menu-close');
+  if (toggleBtn) {
+    const isOpen = !!(mobileMenuSheet && mobileMenuSheet.classList.contains('open'));
+    setMobileMenuOpen(!isOpen);
+  }
+  if (closeBtn) setMobileMenuOpen(false);
+}, true);
 
 indicatorDots.forEach((dot) => {
   dot.addEventListener('click', () => {
